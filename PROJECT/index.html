@@ -64,6 +64,9 @@
     p { margin: 1.4rem 0 0; color: var(--muted); font-size: clamp(1rem, 2.5vw, 1.2rem); line-height: 1.7; }
     .rule { width: 3.5rem; height: 2px; margin: 2rem auto 0; border: 0; background: linear-gradient(90deg, var(--purple), var(--cyan)); border-radius: 2px; }
     .caption { margin-top: 1.2rem; font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; color: #858399; }
+    nav { display: flex; justify-content: center; gap: .75rem; margin-top: 2rem; flex-wrap: wrap; }
+    nav a { padding: .7rem 1rem; color: var(--ink); text-decoration: none; font-size: .9rem; border: 1px solid rgb(255 255 255 / 15%); border-radius: 999px; background: rgb(255 255 255 / 5%); transition: background .2s, border-color .2s, transform .2s; }
+    nav a:hover, nav a:focus-visible { background: rgb(184 154 255 / 18%); border-color: var(--purple); transform: translateY(-2px); outline: none; }
     @keyframes arrive { from { opacity: 0; transform: translateY(20px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
     @keyframes float { 50% { transform: translateY(-7px) rotate(7deg); } }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; } }
@@ -76,6 +79,11 @@
     <p>A small beginning, with a little extra sparkle.</p>
     <hr class="rule">
     <div class="caption">Made for the web</div>
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </main>
 </body>
 </html>
